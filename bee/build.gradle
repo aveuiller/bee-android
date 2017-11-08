@@ -1,5 +1,4 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.neenbedankt.android-apt' // Used by butterknife
 
 // Default parameters to empty string.
 if (!project.hasProperty("debug_sdk_key")) {
@@ -35,7 +34,7 @@ dependencies {
     compile 'io.apisense.sdk:stings-environment:' + apisenseVersion
     compile 'io.apisense.sdk:stings-visualization:' + apisenseVersion
 
-    compile 'io.apisense:java-darts:1.2.0' // Import Sensor type
+    compile 'io.apisense:java-darts:1.4.2' // Import Sensor type
     compile 'me.dm7.barcodescanner:zbar:1.8.3' // QRCode scanner
 
     // Social and Gamification
@@ -59,13 +58,13 @@ dependencies {
     }
 
     // Helpers
-    compile 'com.jakewharton:butterknife:8.0.1'
-    apt 'com.jakewharton:butterknife-compiler:8.0.1'
+    compile 'com.jakewharton:butterknife:8.4.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
 }
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion '25.0.2'
+    compileSdkVersion 26
+    buildToolsVersion '26.0.2'
 
     lintOptions {
         abortOnError false
@@ -74,7 +73,7 @@ android {
     defaultConfig {
         applicationId "com.apisense.bee"
         minSdkVersion 15
-        targetSdkVersion 25
+        targetSdkVersion 26
         versionCode apkCode
         versionName beeVersion
         multiDexEnabled true

@@ -26,9 +26,11 @@ import java.util.TimerTask;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import io.apisense.JSDoc;
 import io.apisense.sdk.APISENSE;
 import io.apisense.sdk.core.store.Crop;
 
+@JSDoc
 public class HomeFragment extends BaseFragment {
 
     private final String TAG = getClass().getSimpleName();
