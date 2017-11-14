@@ -66,6 +66,9 @@
 # Dagger: https://github.com/google/dagger/issues/645
 -dontwarn com.google.errorprone.annotations.*
 
+# Visualization
+-dontwarn android.net.ConnectivityManager
+
 # End apisense
 ##############
 

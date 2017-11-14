@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 
 // Default parameters to empty string.
 if (!project.hasProperty("debug_sdk_key")) {
@@ -58,8 +59,8 @@ dependencies {
     }
 
     // Helpers
-    compile 'com.jakewharton:butterknife:8.4.0'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+    compile 'com.jakewharton:kotterknife:0.1.0-SNAPSHOT'
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
 }
 
 android {
